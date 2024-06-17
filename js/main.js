@@ -2,8 +2,8 @@ let greeting = 'Hello, world!';
 
 console.log(greetting);
 
-let nickname = '짐코딩';
-let hobby = ['헬스', '수영'];
+let nickname = '수빈';
+let hobby = ['1', '2'];
 
 let person = {
   nickname: nickname,
