@@ -21,12 +21,161 @@
     <!-- OG Tag -->
     <mata property="og:title" constent="subin protfolio" />
     <meta property="og:descriptption" content="프론트엔드 개발자 입니다." />
-    <!-- <meta
-      property="og:image"
-      content="https://subin950.github.io/images/og-image.jpg"
-    /> -->
-    <meta property="og:url" content="https://subin950.github.io/" />
+    <meta property="og:image" content="https://subin33.github.io/images/og-image.jpg" />
+    <meta property="og:url" content="https://subin33.github.io/" />
     <meta property="og:type" content="website" />
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <div class="nav__logo">
+          <img class="nav__img" src="./images/logo.png" alt="수빈 로고" />
+          <a href="#" class="nav__brand">subin protfolio</a>
+        </div>
+
+        <div class="nav__menu" id="nav__menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">Home</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">Skills</a>
+            </li>
+            <li class="nav__item">
+              <a href="#project" class="nav__link">Project</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- Home -->
+      <section class="home container section" id="home">
+        <!-- Home Data -->
+        <div class="home__data">
+          <h2 class="home__title">
+            안녕하세요! <br />
+            <strong class="home__title-color">프론트엔드 개발자</strong>
+            <br />
+            <strong class="home__title-color">노수빈</strong>입니다!
+          </h2>
+
+        
+            <a href="https://github.com/subin33" target="_blank" title="깃헙 링크">
+              <i class="fa-brands fa-github home__social-icon"></i>
+            </a>
+          </div>
+        </div>
+
+        <img class="home__img" src="./images/home/profile.gif" alt="profile gif" />
+      </section>
+
+      <!-- About -->
+      <section class="about section bg-grey-1" id="about">
+        <h2 class="section__title">About</h2>
+
+        <div class="about__container container">
+          <!-- 이미지 -->
+          <!-- <img class="about__img" src="./images/about/about.jpg" alt="이미지" /> -->
+          <div class="about__data">
+            <h3 class="about__subtitle">subtitle</h3>
+            <p class="about__text">
+              안녕하세요 프론트엔드 개발자 노수빈 입니다. 
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="section" id="skills">
+        <h2 class="section__title">Skills</h2>
+
+        <div>
+          <div>
+            <h3>Skills</h3>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quae libero
+              delectus. Fuga tenetur quam magnam accusamus incidunt itaque assumenda voluptatum
+              vero, animi nisi fugiat nemo debitis reprehenderit ab deleniti!
+            </p>
+            <div>
+              <article>
+                <div>
+                  <i class="fa-brands fa-html5"></i>
+                  <span>HTML</span>
+                </div>
+                <div>
+                  <!-- percentage -->
+                  <span>85%</span>
+                </div>
+
+                <progress id="html" max="100" value="85"></progress>
+              </article>
+              <article>
+                <div>
+                  <i class="fa-brands fa-css3-alt"></i>
+                  <!-- skill name -->
+                  <span>CSS</span>
+                </div>
+                <div>
+                  <!-- percentage -->
+                  <span>80%</span>
+                </div>
+
+                <progress id="css" max="100" value="80"></progress>
+              </article>
+              <article>
+                <div>
+                  <i class="fa-brands fa-js"></i>
+                  <span>JavaScript</span>
+                </div>
+                <div>
+                  <span>90%</span>
+                </div>
+
+                <progress id="javascript" max="100" value="90"></progress>
+              </article>
+              <article>
+                <div>
+                  <i class="fa-solid fa-server"></i>
+                  <span>VUE</span>
+                </div>
+                <div>
+                  <span>95%</span>
+                </div>
+
+                <progress id="vue" max="100" value="95"></progress>
+              </article>
+            </div>
+          </div>
+
+          <!-- <div>
+            <img src="./images/skills/desktop.jpg" alt="" />
+          </div> -->
+        </div>
+      </section>
+
+      <!-- project -->
+      <section class="section" id="project">
+        <h2 class="section__title">project</h2>
+        <div>
+          <!-- project -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>subin</p>
+      <div>
+        <a href="https://github.com/subin33" target="_blank" title="깃헙 링크">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <p>Copyright &copy; 2024 subin Protfolio.</p>
+    </footer>
+  </body>
 </html>
