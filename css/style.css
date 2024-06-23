@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/* CSS 변수 */
 :root {
   --body-font: 'Noto Sans KR', sans-serif;
 
@@ -46,7 +49,6 @@
 body {
   font-family: var(--body-font);
   color: var(--black-color);
-  font-size: var(--font-size-5);
   margin-top: var(--header-height);
 }
 
@@ -80,6 +82,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
 }
 
 .nav {
@@ -87,7 +90,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-weight: var(--font-weight-black);
-  height: 4.5rem;
+  height: var(--header-height);
 }
 
 .nav__logo {
@@ -97,12 +100,12 @@ body {
 }
 
 .nav__img {
-  width: 42px;
-  height: 42px;
+  width: 50px;
+  height: 50px;
 }
 
 .nav__brand {
-  font-size: var(--font-size-4);
+  font-size: var(--font-size-5);
 }
 
 .nav__list {
@@ -127,17 +130,19 @@ body {
   top: 2rem;
   position: absolute;
 }
+
 /* Home */
 .home {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--spacing-5) 0;
+  padding-top: var(--spacing-5);
+  padding-bottom: var(--spacing-5);
 }
 
 .home__title {
   font-size: var(--font-size-2);
-  line-height: (var(--font-size-2) * 1.4);
+  line-height: 3rem;
   font-weight: var(--font-weight-black);
   margin-bottom: var(--spacing-3);
 }
@@ -180,7 +185,8 @@ body {
 
 /* Section */
 .section {
-  padding: calc(var(--header-height) + 1rem) 0;
+  padding-top: calc(var(--header-height) + 1rem);
+  padding-bottom: calc(var(--header-height) + 1rem);
 }
 .section__title {
   font-size: var(--font-size-3);
@@ -204,11 +210,15 @@ body {
 .bg-grey-1 {
   background-color: #f6f6f6;
 }
+.bg-dark {
+  background-color: var(--dark-color);
+}
+
 /* About */
 .about__container {
   display: flex;
   align-items: center;
-  column-gap: 3rem;
+  column-gap: 5rem;
 }
 .about__subtitle {
   font-size: var(--font-size-4);
@@ -222,5 +232,233 @@ body {
 
 .about__img {
   max-width: 310px;
+  max-height: 420px;
   border-radius: 0.5rem;
+}
+
+/* Skills */
+.skills__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  align-items: center;
+}
+.skills__subtitle {
+  font-size: var(--font-size-4);
+  font-weight: var(--font-weight-black);
+  margin-bottom: var(--spacing-1);
+}
+.skills__img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+.skills__text {
+  line-height: 1.4rem;
+}
+.skills__data {
+  box-shadow: var(--box-shadow-1);
+  border-radius: 0.3rem;
+  margin-top: var(--spacing-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding: 0.8rem 1rem;
+  font-weight: var(--font-weight-bold);
+  overflow: hidden;
+  cursor: default;
+}
+.skills__names {
+  display: flex;
+  align-items: center;
+}
+.skills__icon {
+  font-size: var(--font-size-4);
+  margin-right: var(--spacing-1);
+  color: var(--accent-color);
+}
+.skills__progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  /* appearance 는 브라우저에서 제공하는 스타일 사용 안함 */
+  appearance: none;
+  height: 6px;
+  width: 100%;
+}
+.skills__progress::-webkit-progress-bar {
+  background: var(--white-color);
+  border-radius: 12px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.skills__progress::-webkit-progress-value {
+  background: var(--accent-color);
+  border-radius: 12px;
+  width: 48px;
+}
+
+/* project */
+.project__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.project__img {
+  width: 100%;
+  transition: 0.5;
+  display: block;
+}
+.project__link {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-1);
+}
+.project__img:hover {
+  transform: scale(1.05);
+}
+
+/* footer */
+.footer {
+  background-color: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: 2rem 0;
+  font-weight: var(--font-weight-bold);
+}
+
+.footer__title {
+  font-size: 1.75rem;
+  margin-bottom: var(--spacing-2);
+}
+.footer__social {
+  display: flex;
+  justify-content: center;
+  column-gap: 2rem;
+  margin-bottom: var(--spacing-2);
+}
+.footer__icon {
+  font-size: 1.2rem;
+}
+
+.footer__copy {
+  font-size: var(--font-size-6);
+  font-weight: var(--font-weight-medium);
+}
+/* floatingButton */
+.floating-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  background-color: var(--primary-color);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: var(--box-shadow-1);
+  transition: 0.3s;
+}
+
+.floating-button:hover {
+  background-color: var(--dark-color);
+}
+
+.floating-button-icon {
+  font-size: 1.2rem;
+}
+.nav__toggle {
+  display: none;
+}
+.show {
+  right: 0 !important;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+  :root {
+    --font-size-1: 2rem;
+    --font-size-2: 1.75rem;
+    --font-size-3: 1.5rem;
+    --font-size-4: 1.25rem;
+    --font-size-5: 0.938rem;
+    --font-size-6: 0.75em;
+
+    --header-height: 3rem;
+  }
+  .nav__toggle {
+    display: block;
+    cursor: pointer;
+    padding: 0.5rem;
+  }
+  .nav__menu {
+    position: fixed;
+    background-color: var(--dark-color);
+    height: 100%;
+    width: 60%;
+    top: var(--header-height);
+    right: -100%;
+    padding: 2rem;
+    transition: 0.2s;
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 10px;
+  }
+
+  .nav__list {
+    display: block;
+  }
+  .nav__item {
+    margin-left: 0;
+    margin-bottom: var(--spacing-4);
+  }
+  /* Home  */
+  .home {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .home__title {
+    margin-top: var(--spacing-3);
+  }
+  .home__social {
+    justify-content: center;
+  }
+
+  /* Section */
+  .section__title::after {
+    height: 0.2rem;
+    top: 2.5rem;
+  }
+
+  /* About */
+  .about__container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about__subtitle {
+    margin-top: var(--spacing-2);
+  }
+
+  /* Skills */
+  .skills__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    text-align: center;
+  }
+
+  /* Project */
+  .project__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }

@@ -5,39 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
+
+    <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/style.css" />
 
     <script src="./js/main.js" defer></script>
     <script src="https://kit.fontawesome.com/45976df4cd.js" crossorigin="anonymous"></script>
-    <title>subin portfolio</title>
-    <meta
-      name="description"
-      content="안녕하세요, 저는 프론트엔드 개발자 노수빈입니다. 제 포트폴리오를 소개합니다."
-    />
-    <meta name="author" content="노수빈" />
-    <meta name="keywords" content="프론트엔드" />
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typeit@8.8.3/dist/index.umd.js"></script>
+    <title>노수빈 포트폴리오</title>
+    <meta name="descriptption" content="프론트엔드 개발자 입니다." />
+    <meta name="author" content="subin" />
+    <meta name="keywords" content="웹개발,프론트엔드" />
+
     <!-- OG Tag -->
-    <meta property="og:title" content="노수빈 포트폴리오" />
-    <meta
-      property="og:description"
-      content="안녕하세요, 저는 프론트엔드 개발자 노수빈입니다. 제 포트폴리오를 소개합니다."
-    />
+    <mata property="og:title" constent="subin protfolio" />
+    <meta property="og:descriptption" content="프론트엔드 개발자 입니다." />
     <meta property="og:image" content="https://subin33.github.io/images/og-img.png" />
+    <meta property="og:url" content="https://subin33.github.io" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://subin33.github.io/" />
   </head>
   <body>
     <header class="header">
       <nav class="nav container">
         <div class="nav__logo">
           <img class="nav__img" src="./images/logo.png" alt="수빈 로고" />
-          <a href="#" class="nav__brand">subin portfolio</a>
+          <a href="#" class="nav__brand">subin protfolio</a>
         </div>
-        <div class="nav__menu" id="nav__menu">
+
+        <div class="nav__menu show" id="nav__menu">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="#home" class="nav__link active-link">Home</a>
@@ -53,31 +49,40 @@
             </li>
           </ul>
         </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="fa-solid fa-bars"></i>
+        </div>
       </nav>
     </header>
     <main>
+      <!-- Home -->
       <section class="home container section" id="home">
         <div class="home__data">
-          <h2 class="home__title">
-            안녕하세요! <br />
-            <strong class="home__title-color">프론트엔드 개발자</strong>
-            <br />
-            <strong class="home__title-color">노수빈</strong>입니다!
-          </h2>
+          <h2 id="typeit" class="home__title"></h2>
           <a href="https://github.com/subin33" target="_blank" title="깃헙 링크">
-            <i class="fa-brands fa-github home__social-icon"></i>
+            <i class="fa-brands fa-github home__social-icon"></i> github link
           </a>
         </div>
+
         <img class="home__img" src="./images/home/profile.gif" alt="profile gif" />
       </section>
 
       <!-- About -->
       <section class="about section bg-grey-1" id="about">
         <h2 class="section__title">About</h2>
+
         <div class="about__container container">
+          <img class="about__img" src="./images/about/about.jpg" alt="이미지" />
           <div class="about__data">
-            <h3 class="about__subtitle">subtitle</h3>
-            <p class="about__text">안녕하세요 프론트엔드 개발자 노수빈 입니다.</p>
+            <h3 class="about__subtitle">저는 이렇게 답합니다.</h3>
+            <p class="about__text">
+              안녕하세요. 저는 현재 풀스택 개발자로 일하고 있으며, 1년 6개월의 경력을 가진 노수빈
+              입니다. 여러 프로젝트를 통해 백엔드와 프론트엔드 모두에서 실력을 쌓아왔으며, 특히
+              프론트엔드 개발에 대한 열정이 커지고 있습니다. 사용자 인터페이스를 디자인하고 구현하는
+              과정에서 큰 만족감을 느끼며, 최신 프론트엔드 기술 트렌드와 베스트 프랙티스를 꾸준히
+              학습하고 실제 프로젝트에 적용하고 있습니다. 앞으로 프론트엔드 개발자로서의 전문성을
+              더욱 심화시키고 싶습니다.
+            </p>
           </div>
         </div>
       </section>
@@ -85,77 +90,142 @@
       <!-- Skills -->
       <section class="section" id="skills">
         <h2 class="section__title">Skills</h2>
-        <div>
+        <div class="skills__container container">
           <div>
-            <h3>Skills</h3>
-            <p>
+            <h3 class="skills__subtitle">Skills</h3>
+            <p class="skills__text">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusantium quae libero
               delectus. Fuga tenetur quam magnam accusamus incidunt itaque assumenda voluptatum
               vero, animi nisi fugiat nemo debitis reprehenderit ab deleniti!
             </p>
             <div>
-              <article>
-                <div>
-                  <i class="fa-brands fa-html5"></i>
-                  <span>HTML</span>
+              <article class="skills__data">
+                <div class="skills__names">
+                  <i class="fa-brands fa-html5 skills__icon"></i>
+                  <span class="skills__name">HTML</span>
                 </div>
                 <div>
-                  <span>85%</span>
+                  <span class="skills__percentage">85%</span>
                 </div>
-                <progress id="html" max="100" value="85"></progress>
+
+                <progress class="skills__progress" id="html" max="100" value="85"></progress>
               </article>
-              <article>
-                <div>
-                  <i class="fa-brands fa-css3-alt"></i>
+              <article class="skills__data">
+                <div class="skills__names">
+                  <i class="fa-brands fa-css3-alt skills__icon"></i>
                   <!-- skill name -->
-                  <span>CSS</span>
+                  <span class="skills__name">CSS</span>
                 </div>
                 <div>
-                  <span>80%</span>
+                  <span class="skills__percentage">80%</span>
                 </div>
-                <progress id="css" max="100" value="80"></progress>
+
+                <progress class="skills__progress" id="css" max="100" value="80"></progress>
               </article>
-              <article>
-                <div>
-                  <i class="fa-brands fa-js"></i>
-                  <span>JavaScript</span>
+              <article class="skills__data">
+                <div class="skills__names">
+                  <i class="fa-brands fa-js skills__icon"></i>
+                  <span class="skills__name">JavaScript</span>
                 </div>
                 <div>
-                  <span>90%</span>
+                  <span class="skills__percentage">90%</span>
                 </div>
-                <progress id="javascript" max="100" value="90"></progress>
+
+                <progress class="skills__progress" id="javascript" max="100" value="90"></progress>
               </article>
-              <article>
-                <div>
-                  <i class="fa-solid fa-server"></i>
-                  <span>VUE</span>
+              <article class="skills__data">
+                <div class="skills__names">
+                  <i class="fa-solid fa-server skills__icon"></i>
+                  <span class="skills__name">VUE</span>
                 </div>
                 <div>
-                  <span>95%</span>
+                  <span class="skills__percentage">95%</span>
                 </div>
-                <progress id="vue" max="100" value="95"></progress>
+
+                <progress class="skills__progress" id="vue" max="100" value="95"></progress>
               </article>
             </div>
+          </div>
+
+          <div>
+            <img class="skills__img" src="./images/skills/desktop.jpg" alt="" />
           </div>
         </div>
       </section>
 
       <!-- project -->
-      <section class="section" id="project">
+      <section class="project section" id="project">
         <h2 class="section__title">project</h2>
-        <div>
+        <div class="project__container container">
           <!-- project -->
+          <a
+            class="project__link"
+            href="https://subin33.github.io"
+            target="_blank"
+            title="프로젝트_1"
+          >
+            <img class="project__img" src="./images/project/front-end-fly.png" alt="프로젝트_1" />
+          </a>
+
+          <a
+            class="project__link"
+            href="https://subin33.github.io"
+            target="_blank"
+            title="프로젝트_2"
+          >
+            <img class="project__img" src="./images/project/vue-3-basic.png" alt="프로젝트_2" />
+          </a>
+
+          <a
+            class="project__link"
+            href="https://subin33.github.io"
+            target="_blank"
+            title="프로젝트_3"
+          >
+            <img class="project__img" src="./images/project/vue-3-practice.png" alt="프로젝트_3" />
+          </a>
+
+          <a
+            class="project__link"
+            href="https://subin33.github.io"
+            target="_blank"
+            title="프로젝트_4"
+          >
+            <img class="project__img" src="./images/project/quasar.png" alt="프로젝트_4" />
+          </a>
+
+          <a
+            class="project__link"
+            href="https://subin33.github.io"
+            target="_blank"
+            title="프로젝트_5"
+          >
+            <img class="project__img" src="./images/project/vue-3-firebase.png" alt="프로젝트_5" />
+          </a>
+
+          <a
+            class="project__link"
+            href="https://www.gymcoding.co/courses/nuxt"
+            target="_blank"
+            title="프로젝트_6"
+          >
+            <img class="project__img" src="./images/project/nuxt-3.png" alt="프로젝트_6" />
+          </a>
         </div>
       </section>
+      <button class="floating-button" id="floating-button">
+        <i class="fa-solid fa-arrow-up floating-button-icon"></i>
+      </button>
     </main>
-    <footer>
-      <p>subin</p>
-      <div>
+
+    <footer class="footer">
+      <!-- <p class="footer__title">subin</p> -->
+      <div class="footer__social">
         <a href="https://github.com/subin33" target="_blank" title="깃헙 링크">
-          <i class="fa-brands fa-github"></i>
+          <i class="fa-brands fa-github footer__icon"></i>
         </a>
       </div>
-      <p>Copyright &copy; 2024 subin Protfolio.</p>
+      <p class="footer__copy">Copyright &copy; 2024 subin Protfolio.</p>
     </footer>
   </body>
 </html>
