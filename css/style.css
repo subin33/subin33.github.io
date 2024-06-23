@@ -411,7 +411,6 @@ html {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    margin-bottom: 10px;
   }
 
   .nav__list {
